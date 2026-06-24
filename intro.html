@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+<h1 id="myHeading"></h1>
+<input type="text" id="inp">
+<button onclick="write_now()">Submit</button>
+    <script>
+
+//         alert("Hi")
+// console.log("Hello");
+// document.write("hello");
+//         document.getElementById("myHeading").innerText="Good Afternoon"
+//         print()
+let name = prompt("Enter your name")
+        document.getElementById("myHeading").innerText="Good Afternoon"
+
+        let result = confirm("Are you sure?");
+        document.write("<br>Result:", result)
+
+        function write_now(){
+            document.getElemantById('myHeading').InnerHTML = documet.getElementById('inp').value
+        }
+
+        </script>
+    
+</body>
+</html>

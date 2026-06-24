@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt("Enter a number:"))
+        if(a < 0){
+            document.write("The number is negative.")
+        }
+        else if(a > 0){
+            document.write("The number is positive.")
+    }
+    else{
+        document.write("The number is zero")
+    }
+
+    // WAP to find out if a given number is odd or even
+    let A= Number(prompt("Ener a number:"))
+    if (A%2 == 0){ 
+    document.write("<br>The given number is even.")
+    }
+    else{
+        document.write("<br>The given number is odd.")
+    }
+    
+    // WAP to input a year and check if it is a leap year or not
+    let year=Number(prompt("Enter a year:"))
+    if(year % 400 == 0){
+        document.write("<br>It is a leap year.")
+    }
+    else if(year % 100 == 0){
+        document.write("<br>It is not a leap year.")
+    }
+    else if(year % 4 == 0){
+        document.write("<br>It is a leap year.")
+    }
+    else{
+        document.write("<br>It is not a leap year.")
+    }
+
+    // wap to input 3 sides of a triangle and check whether it is a valid triangle or not
+    let x = Number(prompt("Enter side a:"))
+    let y = Number(prompt("Enter side b:"))
+    let z = Number(prompt("Enter side c:"))
+    if (x + y > z && y + z > x && z + x > y){
+        document.write("<br>It is a valid triangle")
+    if (x == y && y == z){
+        document.write("It is an equilateral trangle")
+    }
+    else if(x == y || y == z || z ==x){
+        document.write("It is an isosceles triangle")
+    }
+    else{
+        document.write("It is scalar")
+    }
+    }
+    else{
+        document.write('<br>"It is an invalid triangle"')
+    }
+
+    // wap to input marks of a student in five subjects and check if he is pass or fail. Calculate total and percentage and his grade
+    // 90+ = A+
+    // 80-90 = A
+    // 70-80 = B+
+    // 60-70 = B
+    // 50-60 = C
+    // 40-50 = D
+    // otherwise = NG
+    let name = prompt("Enter your name")
+    let p = Number(prompt("Enter your marks in Physics:"))
+    let c = Number(prompt("Enter your marks in Chemistry:"))
+    let m = Number(prompt("Enter your marks in Maths:"))
+    let e = Number(prompt("Enter your marks in English:"))
+    let n = Number(prompt("Enter your marks in Nepali:"))
+
+    if(p > 40 && c > 40 && m > 40 && e > 40 && n > 40){
+        document.write('<br>"You have passed"')
+        let Total = p + c + m + e + n
+        document.write('<br>The total marks scored =', Total) 
+        let Percentage = (Total/500)*100
+        document.write('<br>The Percentage =',Percentage)
+        if(Percentage > 90){
+            document.write("<br>You have scored A+")
+        }
+        else if(Percentage >= 80 && Percentage < 90){
+            document.write("<br>You have scored A")
+        }
+         else if(Percentage >= 70 && Percentage < 80){
+            document.write("<br>You have scored B+")
+        }
+         else if(Percentage >= 60 && Percentage < 70){
+            document.write("<br>You have scored B")
+        }
+         else if(Percentage >= 50 && Percentage < 60){
+            document.write("<br>You have scored C")
+        }
+         else if(Percentage >= 40 && Percentage < 50){
+            document.write("<br>You have scored D")
+        }
+        else{
+            document.write("<br>NG")
+        }
+    }
+    else{
+        document.write('<br>"You have failed"')
+    }
+
+    // wap to input 3 numbers and check which one is greater among them
+    let r = Number(prompt("Enter a number"))
+    let s = Number(prompt("Enter a number"))
+    let l = Number(prompt("Enter a number"))
+    if (r > s && r > l ){
+        document.write("<br>'R' is the greatest")
+    }
+    else if(s > r && s > l){
+        document.write("<br>'S' is the greatest")
+    }
+    else{
+        document.write("<br>'L' is the greatest")
+    }
+
+    // wap tp enter a number( 1 to 7) and display corresponding day(1 - sunday, 2 - monday, ... , 7 - saturday)
+    let b = Number(prompt("Enter a number from 1 to 7"))
+    if(b == 1){
+        document.write("<br>It is Sunday")
+    }
+    else if(b == 2){
+        document.write("<br>It is Monday")
+    }
+    else if(b == 3){
+        document.write("<br>It is Tuesday")
+    }
+    else if(b == 4){
+        document.write("<br>It is Wednesday")
+    }
+    else if(b == 5){
+        document.write("<br>It is Thursday")
+    }
+    else if(b == 6){
+        document.write("<br>It is Friday")
+    }
+    else if(b == 7){
+        document.write("<br>It is Saturday")
+    }
+    else{
+    document.write("<br>Invalid input");
+    }
+    </script>
+</body>
+</html>
