@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT-4(SCISSOR-PAPER-ROCK)</title>
+</head>
+<body>
+  <img id ="A" src="">
+    <script>
+let A = Math.floor(Math.random() * 3) + 1
+if(A == 1){
+    document.write("<big><br>Your chice is : ", A, " (Scissor)</big>")
+    document.getElementById("A").src = "scissor.png"
+}
+else if(A == 2){
+    document.write("<big><br>Your chice is : ", A, " (Paper)</big>")
+    document.getElementById("A").src = "paper.png"
+}
+else{
+    document.write("<big><br>Your chice is : ", A, " (Rock)</big>")
+    document.getElementById("A").src = "rock.png"
+}
+
+    </script>
+</body>
+</html>

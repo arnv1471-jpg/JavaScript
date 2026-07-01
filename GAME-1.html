@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scissor-Paper-Rock Game</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .container div{
+            width: 50%;
+            text-align: center;
+        }
+        #comp, #player{
+            width: 50%;
+        }
+        #result{
+            text-align: center;
+      }
+    </style>
+</head>
+<body>
+<div class ="input">
+    <button onclick="player_input(0)">Rock</button>
+    <button onclick="player_input(1)">Scissors</button>
+    <button onclick="player_input(2)">Paper</button>
+</div>
+
+    <div class="container"><div>
+        <h1>Computer</h1>
+        <img src ="" alt ="" id ="comp">
+    </div>
+
+    <div>
+        <h1>Player</h1>
+        <img src ="" alt ="" id ="player">
+    </div>
+</div>
+    
+
+    <div>
+        <h1 id ="result"></h1>
+    </div>
+
+    <script>
+let images = ["rock.png", "scissor.png", "paper.png"]
+// let player = prompt("Enter 1 for rock, 2 for scissors, 3 for paper")
+
+const player_input = (input) => {
+let player = input
+let comp = Math.floor(Math.random() * 3)
+document.getElementById("comp").src = images[comp]
+document.getElementById("player").src = images[player]
+
+if(player == comp){
+document.getElementById("result").innerText = "Game Draw"
+}
+else if(player == 0 && comp == 1 || player == 1 && comp == 2 || player == 2 && comp == 0){
+    document.getElementById("result").innerText = "You Win"
+}
+else{
+    document.getElementById("result").innerText = "You Lose"
+}
+}
+   </script>
+</body>
+</html>
