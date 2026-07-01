@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- const function_name = (parameters) => {
+    statements
+    return
+    }
+     
+    -->
+
+    <script>
+const add = (m, n) => {
+    return m + n
+}
+
+const substract = () => {
+    let a = prompt("Enter your first number")
+        let b = prompt("Enter your second number")
+return a - b
+}
+
+const product = (x, y) => {
+    document.write("<br>Product = ",  x * y)
+}
+
+document.write("<br>Sum = ", add(4, 5))
+document.write("<br>Difference = ", substract())
+product(4, 5)
+
+
+//recursive function - function that calls itself
+// base case
+// function must call itself
+// each time function calls itself should move closer to base case
+
+// factorial of a number
+const factorial = c => {
+    if (c <=1){
+        return 1
+    }
+    else{
+        return c * factorial(c - 1)
+    }
+} 
+
+// fibonacci series
+const fibo = d => {
+    if(d == 1 || d == 2){
+        return 1
+    }
+    else{
+        return sibo(d-2) + fibo(d-1)
+    }
+}
+for(d=1; d<=20; d++){
+    document.write(fibo(d)," ")
+}
+
+
+    </script>
+</body>
+</html>

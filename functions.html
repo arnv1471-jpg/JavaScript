@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    Function - a block of code that can be run when necessary
+    syntax - function function_name (parameters){
+    statements
+    return
+    }
+    function_name(arguments)
+    -->
+
+    <script>
+// function to add 2 number
+function add(m, n){
+    let sum = m + n
+    return sum
+}
+let ans = add(5, 6)
+document.write("SUM =", ans)
+document.write("<br>SUM = ",  add(9, 10))
+
+function subtract(){
+    let a = prompt("Enter first number")
+    let b = prompt("Enter second number")
+    return a - b
+}
+document.write("<br>Difference =", subtract())
+
+function product(x, y){
+    document.write("<br>Product = ", x * y)
+}
+product(4, 5)
+
+function division(){
+    let a = prompt("Enter first number")
+    let b = prompt("Enter second number")
+    document.write("<br>Quotient = ", Math.floor(a / b))
+    document.write("<br>Remainder = ", a % b)
+}
+division()
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id ="timer"></h1>
+
+    <script>
+let today = new Date()
+    document.write("<br>", today)
+
+    let dob = new Date('2008', '07', '17', '7','45', '59')
+    document.write("<br>Date of Birth: ", dob)
+
+    let yy = today.getFullYear()
+    document.write("<br>Year: ", yy)
+
+     let mm = today.getMonth()
+     let months = ["JAN", "FEB", "MAR", "APRIL", "MAY", "JUNE", "JULY", "AUG", "SEP", "OCT", "NOV", 'DEC']
+    document.write("<br>Month: ", months[mm])
+
+    let hh = today.getHours()
+    let min = today.getMinutes()
+    let ss = today.getSeconds()
+    let ms = today.getMilliseconds()
+    document.write("<br>", hh, ":", mm, ":", ss, ":", ms)
+    
+
+
+    function getTime(){
+    let today = new Date()
+    let hh = today.getHours()
+    let min = today.getMinutes()
+    let ss = today.getSeconds()
+    let ms = today.getMilliseconds()
+    let timeNow = today.toLocaleTimeString()
+
+    document.getElementById('timer').innerHTML = timeNow
+    
+    
+    // `<br>§(hh > 12 ? hh - 12 : hh):§(min):§(ss):§(ms) §(hh < 12 ? 'am' :'pm')`
+    }
+
+    setInterval(getTime, [i])
+
+
+
+
+
+
+    </script>
+</body>
+</html>

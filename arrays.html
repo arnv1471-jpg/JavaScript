@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Array - collection of data -->
+
+
+    <script>
+// let arr = [1, 2, 3, 'a', 'b']
+// document.write("Array = ", arr)
+// document.write("<br>Length = ", arr.length)
+
+let fruits = ["apple", "orange", "mango", "banana"]
+document.write("Fruits = ", fruits)
+// push(new member) -> adds new member to the end of the array
+fruits.push('pear')
+document.write("<br>Fruits pushed =", fruits)
+
+// unshift(new member) -> adds new member to the start of the array
+fruits.unshift('peach')
+document.write("<br>Fruits unshift =", fruits)
+
+// pop() -> removes a member of the end
+let removed = fruits.pop()
+document.write("<br> fruits(POP) = ", fruits)
+
+// shift() -> removes a member from the start of the array
+removed = fruits.shift()
+document.write("<br> fruits (shift) = ", fruits)
+
+removed = fruits.splice(2, 1, 'pear', 'papaya')
+document.write("<br>Fruits(splice) = ", fruits)
+
+// sort -> arranges member in alphabtical order
+fruits.sort()
+document.write("<br>Sorted = ", fruits)
+
+// reverse() -> reverses the order of the member
+fruits.reverse()
+document.write("<br>Reversed = ", fruits)
+
+let new_fruits = fruits.toSpliced(2, 2)
+document.write("<br>Original array = ", fruits)
+document.write("<br>New array = ", new_fruits)
+
+new_fruits = fruits.toSorted()
+document.write("<br>Original array = ", fruits)
+document.write("<br>New array = ", new_fruits)
+
+new_fruits = fruits.toReversed()
+document.write("<br>Original array = ", fruits)
+document.write("<br>New array = ", new_fruits)
+
+// concat -> to combine multiple arrays
+let veg =["potato", "carrot"]
+new_fruits = fruits.concat(veg)
+document.write("<br>Concat = ", new_fruits)
+
+// slice(start index, end index)
+new_fruits = fruits.slice(2, 4)
+document.write("<br>Original array = ", fruits)
+document.write("<br>New array(slice) = ", new_fruits)
+
+
+
+    </script>
+</body>
+</html>

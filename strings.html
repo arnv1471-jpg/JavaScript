@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    
+    <!-- Strings : collection of characters
+     "" or ''
+     + - string concatenation operator
+    -->
+
+    <script>
+let fname = "Arnav"
+let lname = "Napit"
+let fullname = fname + " " + lname
+document.write("<br>Full Name = ", fullname)
+
+document.write("<br>Character at 7:", fullname.charAt(7))
+document.write("<br>Character at 7:", fullname.charCodeAt(7))
+
+document.write("<br>v is at ", fullname.indexOf('v'))
+// capital letters and small letters make a change
+document.write("<br>V is at ", fullname.indexOf('V'))
+
+// slice(start, end) -> creates new string from start to end
+let new_name = fullname.slice(4,9)
+document.write("<br>New Name: ", new_name)
+
+// substring(start, end) -> creates new string from start to end; does not accept negaive value; start and end can be exchanged
+new_name = fullname.substring(4,7)
+document.write("<br>New Name: ", new_name)
+new_name = fullname.substring(-6,3)
+document.write("<br>New Name: ", new_name)
+new_name = fullname.substring(3,-6)
+document.write("<br>New Name: ", new_name)
+new_name = fullname.substring(5)
+document.write("<br>New Name: ", new_name)
+
+// substr(start, length) -> accepts negative value in start, not in length
+new_name = fullname.substr(1, 5)
+document.write("<br>New Name: ", new_name)
+new_name = fullname.substr(-6, 3)
+document.write("<br>New Name: ", new_name)
+
+
+let str ='JAVASCRIPT - JavaScript is programming language for web. JavaScript can be used for frontend and backend both.'
+// search
+let search = str.search('JavaScript')
+document.write("<br>Search: ", search)
+
+// starswith - looks only at the start
+search = str.startsWith('JAVASCRIPT')
+document.write("<br>Starts With J: ", search)
+
+// endsWith - looks only at the back
+search = str.endsWith('.')
+document.write("<br>Ends With : ", search)
+
+// includes - looks at all
+search = str.includes('for')
+document.write("<br>Includes frontend: ", search)
+
+// replace(string, replaceCewITH)
+let result = str.replace(/JavaScript/ig, 'Python')
+document.write("<br>Result : ", result)
+
+result = str.replaceAll('JavaScript', 'Python')
+document.write("<br>Result : ", result)
+
+// trim - removes space from start and end of the string
+fname = "   Arnav "
+document.write("<br>Length:", fname.trim().length)
+
+// trimStart - removes space from start 
+document.write("<br>Length:", fname.trimStart().length)
+
+// trimEnd - removes space from end of the string
+document.write("<br>Length:", fname.trimEnd().length)
+
+// padStart, padEnd - to fill the stribg into a certain count
+let num = '123'
+document.write("<br>Number: ", num.padStart(6, '0'))
+document.write("<br>Number: ", num.padEnd(6, 'x'))
+
+// split(character)
+let words = str.split(' ')
+document.write("<br>words: ", words)
+document.write("<br>Number of words:", words.length)
+
+let sentences = str.split('.')
+sentences.map(sentence => document.write("<br>", sentence))
+
+
+
+
+    </script>
+</body>
+</html>

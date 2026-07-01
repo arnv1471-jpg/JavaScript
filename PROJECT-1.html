@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT-1</title>
+</head>
+<body>
+<h1><ins>THIS IS A PROJECT TRYING TO REPLICATE A WORD COUNTER.</ins></h1>
+
+    <script>
+let str = "In today's world, fashion trends change faster than ever because of social media, celebrities, and online shopping. Platforms like Instagram and TikTok allow new styles to become popular within days, influencing millions of people around the world. Fashion is no longer just about clothing—it has become a way for people to express their personality, creativity, and identity. At the same time, the rapid rise of trends has also increased awareness about sustainable fashion, encouraging many people to choose quality, ethical, and environmentally friendly clothing."
+document.write("<big><br>The paragraph is : ", str, "</big>")
+
+document.write("<br>a is at ", str.indexOf('a'))
+document.write("<br>The total number of characters = ", str.length)
+
+// counting words
+let words = str.split(' ')
+document.write("<br>Number of words:", words.length)
+
+
+// asking the user a prompt and counting the words
+let sing = prompt("Enter a paragraph")
+document.write("<hr size='5' color='red'>")
+document.write("<big><br>User's paragraph : ", sing, "</big>")
+document.write("<br>Total character = ", sing.length)
+
+// counting words only not numbers.
+words = sing.split(' ')
+lass = 0
+for(let x = 0; x < words.length; x++){
+    if (
+        words[x][0] >= 'A' && words[x][0] <= 'Z' ||
+        words[x][0] >= 'a' && words[x][0] <= 'z'
+    ) {
+        lass++;
+    }
+}
+document.write("<br>Total words = ", lass)
+
+
+
+// counting vowels
+let count = 0
+for(let i = 0; i < sing.length; i++){
+    if(
+        sing[i] == 'a' ||
+        sing[i] == 'e' || 
+        sing[i] == 'i' || 
+        sing[i] == 'o' || 
+        sing[i] == 'u' || 
+        sing[i] == 'A' || 
+        sing[i] == 'E' || 
+        sing[i] == 'I' || 
+        sing[i] == 'O' || 
+        sing[i] == 'U' 
+   ) {
+        count++
+    }
+}
+document.write("<br>Total vowels = ", count)
+
+
+
+</script>
+</body>
+</html>

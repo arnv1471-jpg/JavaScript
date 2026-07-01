@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+let fruits = ["apple", "orange", "mango", "papaya", "pear", "banana", "grapes"]
+
+// for(i = 0; i < fruits.length; i++){
+//     document.write("<h3>", fruits[i], "</h3>")
+// }
+
+// for in loop - to take individual member based on index
+for(let i in fruits){
+    document.write("<h2>", fruits[i], "</h2>")
+}
+
+// for of loop
+for(let member of fruits){
+    document.write("<h3>", member, "</h3>")
+}
+
+// forEach
+fruits.forEach(function(member, index){
+    document.write("<h2>", member, "</h2>")
+})
+let new_fruits = fruits.forEach((member, index) => {
+    document.write("<h2>", index+1, " ", member, "</h2>")
+    return member.toUpperCase()
+})
+document.write("<br>NEW FRUITS: ", new_fruits)
+
+
+// map
+new_fruits = fruits.map((member, index) => {
+    document.write("<h2>", index + 1, " ", member, "</h2>")
+        return member.toUpperCase()
+})
+document.write("<br>NEW FRUITS: ", new_fruits)
+
+// filter
+new_fruits = fruits.filter((member)=>{
+    return member.match('ap')
+})
+document.write("<br>FILTERED RESULTS: ", new_fruits)
+
+// find - to search a member
+new_fruits = fruits.find((member)=>{
+    return member.match('ap')
+})
+document.write("<br>FIND RESULTS: ", new_fruits)
+
+// findIndex - returns it's position
+new_fruits = fruits.findIndex((member)=>{
+    return member.match('ap')
+})
+document.write("<br>FIND INDEX RESULTS: ", new_fruits)
+
+// findLast
+new_fruits = fruits.findLast((member)=>{
+    return member.match('ap')
+})
+document.write("<br>FIND LAST RESULTS: ", new_fruits)
+
+// findLastIndex - to give position of last index
+new_fruits = fruits.findLastIndex((member)=>{
+    return member.match('ap')
+})
+document.write("<br>FIND LAST INDEX RESULTS: ", new_fruits)
+
+
+
+let num = [1, 2, 3, 4, 5 ,6 ,7, 8, 9, 10, 55]
+// reduce, reduceRight
+let sum = num.reduce((accumulator, current) => {
+document.write("<br>Accumulator = ", accumulator, " Current = ", current)
+return accumulator + current
+})
+document.write("<br>Sum = ", sum)
+
+sum = num.reduceRight((accumulator, current) => {
+document.write("<br>Accumulator = ", accumulator, " Current = ", current)
+return accumulator - current
+}, 100)
+document.write("<br>Difference = ", sum)
+
+
+num = [1, 2, 3, 11, 23, 34, 42, 100, 200, 1000]
+num.sort((a,b) => {
+    document.write("<br>", a, " ", b, " ", a-b)
+    return a - b
+})
+document.write("<br>", num)
+
+// indexOF
+fruits = fruits.concat(fruits)
+document.write("<br>", fruits)
+
+let search = fruits.indexOF('apple')
+document.write("<br>Searching: ", search)
+
+
+
+
+    </script>
+</body>
+</html>
