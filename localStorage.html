@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let key = "age"
+        localStorage.setItem(key, 32)
+        localStorage.setItem("name", "Ram")
+        localStorage.setItem("IsLoggedIn", true)
+        // no need to give quotation marks for boolean variables or the ones wihich have variables defined
+
+        let name = localStorage.getItem("name")
+        document.write("<br>Name = ", name)
+        document.write("<br>Type of Name = ", typeof(name))
+
+        let age = Number(localStorage.getItem(key))
+        document.write("<br>Age = ", age)
+                document.write("<br>Type of Age = ", typeof(age))
+
+
+                // JSON - JAVASCRIPT OBJECT NOTATION
+                // JSON.stringify(object) -> converts the object into JSON string
+
+
+        localStorage.removeItem("name")
+
+
+        sessionStorage.setItem("isLoggedIn", true)
+    </script>
+</body>
+</html>

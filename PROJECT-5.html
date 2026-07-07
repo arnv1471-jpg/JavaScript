@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamble</title>
+</head>
+<body>
+    
+    <script>
+        let A = Math.floor(Math.random() * 10)
+        document.write("<br>Random number A is : ", A)
+        let B = Math.floor(Math.random() * 10)
+        document.write("<br>Random number B is : ", B)
+
+        let num = prompt("Which will be greater A or B?")
+        if (num == "A" && A > B){
+            document.write("<br>you win")
+        }
+        else if (num == "B" && B > A){
+            document.write("<br>you win")
+        }
+        else{
+            document.write("<br>you lose")
+        }
+    </script>
+</body>
+</html>

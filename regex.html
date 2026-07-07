@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--regular expression
+'' -> template literal
+/abc/ -> regular expression
+/.../ -> expression literal
+
+/abc/ -> abc
+/[abc]/ -> one of a or b or c
+/[a - e]/ -> a or b or c or d or e
+/[a - z]/ -> lowercase alphabets
+/[A - Z]/ -> uppercase alphabets
+/[0 - 9]/ - numbers
+/[!@#$%^&*_-]/ - special characters
+/[a - zA - Z]/ -> lowercase or uppercase
+/[a - zA - Z0 - 9_]/ -> alphabets, numbers and "_"
+
+metaa characters -> which gives information
+^ - start = to check if the character starts with certain alphabets 
+$ - end
+. - single random character
++ - compulsory (1 or more) = [example: a+ => 1 or more a(repeats)]
+* - optional character = [example: a* => 0 or more a]
+{5} - 5 characters = [example: a{5} => there needs to be exactly five a]
+{5,}- minimum = [example: a{5,} => there needs to be minimum five a]
+{0,5}- minimum = [example: a{2,5} => there needs to be maximum five a minimum two a]
+
+username -> /^[a-zA-Z0-9_]{3,15}$/
+phone -> /^(98)[0-9]{8}$/
+email -> /^[a-z][a-z0-9.]+[@](gmail)[.](com)$/
+
+
+     -->
+
+    <script>
+let str = 'math'
+let expr =/^.at.$/
+str.match(expr) ?
+document.write(str, " matches ", expr)
+:
+document.write(str, " does not match ", expr)
+
+
+        </script>
+
+    
+</body>
+</html>
+
+<!-- create a form in html, for username, email, phone, 
+ password and a button -->

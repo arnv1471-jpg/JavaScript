@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+    .header a{
+color: black;
+    }
+    .header_dark a{
+color: white;
+    }
+    .pwdField{
+        position : relative;
+        background-color: black;
+        width: 200px;
+    }
+    #pwd{
+        width: 100%;
+
+    }
+
+
+    </style>
+</head>
+<body id="body">
+    <button id = "mode" class ="test" name = "test" onclick="toggleMode()"></button>
+
+    <div class ="pwdField">
+    <input type ="password">
+    <button id ="pwdBtn" onclick="togglePasswordField()">SHOW</button>
+</div>
+    
+
+    <script>
+let pwd = document.querySelector("#pwd")
+let pwdBtn = document.querySelector("#pwdBtn")
+
+let pwdStatus = "password"
+
+const togglePasswordField = () => {
+pwdStatus = pwdStatus == "password" ? "text" : "password"
+pwdBtn.innerHTML = pwdStatus === "password" ? "SHOW" : "HIDE"
+pwd.type = pwdStatus
+}
+
+let body = document.getElementById("body")
+
+let header = document.createElement("header")
+body.append(header)
+
+header.style.height = "50px"
+header.style.backgroundColor = "skyblue"
+
+let menuItems = ["HOME", "ABOUT","Gallery", "SERVICES", "BLOGS", "CONTACT"]
+menuItems.map(item =>{
+    let menuItem = document.createElement("a")
+    menuItem.innerText = item
+    menuItem.href = `${item}.html`
+
+    menuItem.style.textDecoration = "none"
+    header.appendChild(menuItem)
+})
+
+header.style.display = "flex"
+header.style.justifyContent = "space-evenly"
+header.style.alignItems = "center"
+
+let darkMode = false    
+
+let modeBtn = document.querySelector("#mode")
+modeBtn.innerHTML = darkMode ? "DARK" : "LIGHT"
+
+const toggleMode = ()  => {
+    darkMode = !darkMode
+        modeBtn.innerHTML = darkMode ? "DARK" : "LIGHT"
+
+        header.style.backgroundColor = darkMode ? "black" : "skyblue"
+
+       darkMode ? header.classList.add("header_dark") : header.classList.remove("header_dark")
+       darkMode ? header.classList.remove("header") : header.classList.add("header")
+
+
+}
+
+
+    </script>
+</body>
+</html>

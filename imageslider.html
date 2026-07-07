@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image slider</title>
+    <style>
+.relative{
+width: 1000px;
+height: 700px;
+background-color:goldenrod;
+background-size:contain;
+margin:auto;
+}
+.left{
+width:auto;
+height:auto;
+background-color:white;
+position:absolute;
+top:40%;
+left:225px;
+font-size:30px;
+}
+img{
+    width:100%;
+    height:100%;
+}
+.right{
+width:auto;
+height:auto;
+background-color:white;
+position:absolute;
+top:40%;
+right:225px; 
+font-size:30px;
+}
+    </style>
+</head>
+<body>
+   <div class="relative">
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" id = "img-slider" alt="image">
+    <div class="left">&lt;&lt;</div>
+    <div class="right">&gt;&gt;</div>
+   </div>
+
+   <script>
+    let images = ["paper.png", "rock.png", "scissor.png"]
+
+    let sliderImg = document.querySelector("#img-slider")
+    let leftBtn = document.querySelector(".left")
+    let rightBtn = document.querySelector(".right")
+    let index = 0
+    sliderImg.src = images[index]
+
+    const nextImg = () => {
+        index++
+        if (index >= images.length) {
+            index = 0
+        }
+        sliderImg.src = images[index]
+    }
+
+    rightBtn.addEventListener("click", nextImg)
+
+    const prevImg = () => {
+        index--
+        if (index < 0) {
+            index = images.length - 1
+        }
+        sliderImg.src = images[index]
+    }
+
+    leftBtn.addEventListener("click", prevImg)
+
+    setInterval(nextImg, [5000])
+
+   </script>
+</body>
+</html>
